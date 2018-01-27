@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-p = 0.5
-a = 3.0
-b = 8.0
+p = 0.33
+a = 4.0
+b = 7.0
 
 with open("data-" + str(p) + '-' + str(a) + '-' + str(b), 'r') as f:
 	vals = [float(line) for line in f]

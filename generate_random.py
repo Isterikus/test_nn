@@ -16,9 +16,10 @@ def generateNumber(p, a, b):
 
 def parseData(p, a, b):
 	numbers = [generateNumber(p, a, b) for i in range(1000)]
-	with open("data-" + str(p) + "-" + str(a) + "-" + str(b), 'w') as f:
+	with open("srav2", 'w') as f:
 		for i in range(1000):
-			f.write(str(numbers[i]) + '\n')
+			if numbers[i] <= 1.0:
+				f.write(str(numbers[i]) + ', ')
 
 if __name__ == '__main__':
 	p, a, b = list(map(float, [sys.argv[i] for i in range(1, 4)]))

@@ -1,11 +1,18 @@
 import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
 
-p = 0.33
-a = 4.0
-b = 7.0
+p = 0.5
+a = 3.0
+b = 8.0
 
 with open("data-" + str(p) + '-' + str(a) + '-' + str(b), 'r') as f:
-	vals = [float(line) for line in f if float(line) <= 1.0]
+	vals = np.array([float(line) for line in f if float(line) <= 1.0])
 
-plt.scatter(vals, vals)
-plt.show()
+# df =
+# plt.scatter(vals, vals)
+df = pd.DataFrame(vals)
+# plt.show()
+print(df.quantile([.1, .5]))
+
+
